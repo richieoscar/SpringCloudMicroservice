@@ -1,0 +1,4 @@
+# Project exclude paths
+/department/target/
+/eureka-server/target/
+/student/target/
