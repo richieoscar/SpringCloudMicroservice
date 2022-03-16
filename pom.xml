@@ -12,6 +12,7 @@
     <module>student</module>
     <module>department</module>
       <module>eureka-server</module>
+      <module>cloud-gateway</module>
   </modules>
 
   <name>schoolservices</name>

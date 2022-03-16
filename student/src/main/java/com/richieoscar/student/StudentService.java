@@ -27,7 +27,7 @@ public class StudentService {
     public StudentResponse getStudentWithDepartment(Long id) {
         StudentResponse studentResponse = new StudentResponse();
         Student student = studentRepository.findById(id).orElseThrow(() -> new StudentNotFoundException(String.format("Student with %d not founnd", id)));
-        Department department = restTemplate.getForObject("http://localhost:9000/department/api/v1/department/get-department/" + student.getDepartmentId(),
+        Department department = restTemplate.getForObject("http://DEPARTMENT-SERVICE/department/api/v1/department/get-department/" + student.getDepartmentId(),
                         Department.class);
         studentResponse.setStudent(student);
         studentResponse.setDepartment(department);
